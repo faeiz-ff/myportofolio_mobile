@@ -87,6 +87,8 @@ class _ExperienceFormPageState extends State<ExperienceFormPage> {
                 child: InputDatePickerFormField(
                   firstDate: DateTime.utc(2007),
                   lastDate: DateTime.now(),
+                  fieldHintText: "Tanggal pengalaman dimulai",
+                  fieldLabelText: "Tanggal pengalaman dimulai",
                   errorFormatText: "Format Tanggal Salah!",
                   errorInvalidText: "Tanggal tidak valid!",
                   onDateSubmitted: ((DateTime value) {
