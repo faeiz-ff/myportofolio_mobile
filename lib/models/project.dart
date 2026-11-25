@@ -22,7 +22,8 @@ class Project {
     this.starredByNames = '',
   });
 
-  factory Project.fromJson(Map<String, dynamic> json) => _$ProjectFromJson(json);
+  factory Project.fromJson(Map<String, dynamic> json) =>
+      _$ProjectFromJson(json);
 
   // Server-generated
   @JsonKey(includeToJson: false)

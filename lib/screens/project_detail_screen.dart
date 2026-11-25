@@ -28,7 +28,10 @@ class ProjectDetailScreen extends StatelessWidget {
           children: [
             Text(
               project.title,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 22.0),
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22.0,
+              ),
             ),
             const SizedBox(height: 8.0),
 
@@ -119,9 +122,8 @@ class _LinkTile extends StatelessWidget {
         onTap: () async {
           await Clipboard.setData(ClipboardData(text: url));
           if (!context.mounted) return;
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Tautan $label disalin.')),
-          );
+          ScaffoldMessenger.of(context)
+              .showSnackBar(SnackBar(content: Text('Tautan $label disalin.')));
         },
       ),
     );
